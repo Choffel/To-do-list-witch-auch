@@ -13,22 +13,22 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
-    private String Email;
+    private String email;
     private String username;
     private String password;
     private String role;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "autor")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "author")
     private List<Task> tasks = new ArrayList<>();
 
 
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        this.Email = email;
+        this.email = email;
     }
 
     public String getUsername() {

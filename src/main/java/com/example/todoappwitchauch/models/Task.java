@@ -30,7 +30,7 @@ public class Task {
 
     public Task() {
         this.createdAt = LocalDate.now();
-        this.status = TaskStatus.PENDING; // добавлена точка с запятой
+        this.status = TaskStatus.ACTIVE;
     }
 
 
@@ -91,7 +91,7 @@ public class Task {
         this.author = author;
     }
 
-
+// разолбраться в этом говне
     @PrePersist
     protected void onCreate() {
         if (createdAt == null) {

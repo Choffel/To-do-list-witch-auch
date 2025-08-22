@@ -1,5 +1,6 @@
-package com.example.todoappwitchauch.dto;
+package com.example.todoappwitchauch.models;
 
+import com.example.todoappwitchauch.enums.Roles;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -16,7 +17,9 @@ public class User {
     private String email;
     private String username;
     private String password;
-    private String role;
+
+    @Enumerated(EnumType.STRING)
+    private Roles role;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "author")
     private List<Task> tasks = new ArrayList<>();
@@ -47,11 +50,11 @@ public class User {
         this.password = password;
     }
 
-    public String getRole() {
+    public Roles getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Roles role) {
         this.role = role;
     }
 

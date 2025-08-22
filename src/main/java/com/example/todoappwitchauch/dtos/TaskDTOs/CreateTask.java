@@ -1,4 +1,4 @@
-package com.example.todoappwitchauch.dtos.TastDTOs;
+package com.example.todoappwitchauch.dtos.TaskDTOs;
 
 public class CreateTask {
     private String title;

@@ -1,4 +1,4 @@
-package com.example.todoappwitchauch.dtos;
+package com.example.todoappwitchauch.dtos.UserDTOs;
 
 
 public class RegistrUser {

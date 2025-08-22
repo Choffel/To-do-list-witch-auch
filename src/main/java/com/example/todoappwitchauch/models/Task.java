@@ -1,4 +1,4 @@
-package com.example.todoappwitchauch.dto;
+package com.example.todoappwitchauch.models;
 
 import com.example.todoappwitchauch.enums.TaskStatus;
 import jakarta.persistence.*;
@@ -91,7 +91,7 @@ public class Task {
         this.author = author;
     }
 
-// разолбраться в этом говне
+
     @PrePersist
     protected void onCreate() {
         if (createdAt == null) {
@@ -113,10 +113,5 @@ public class Task {
         this.title = title;
         this.description = description;
         this.author = author;
-    }
-
-    public Task(String title, String description, TaskStatus status, User author) {
-        this(title, description, author);
-        this.status = status;
     }
 }
